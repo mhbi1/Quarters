@@ -1,0 +1,33 @@
+PODS:
+  - Charts (3.0.5):
+    - Charts/Core (= 3.0.5)
+  - Charts/Core (3.0.5)
+  - TRCurrencyTextField (0.1.1)
+
+DEPENDENCIES:
+  - Charts (from `https://github.com/danielgindi/Charts.git`, branch `master`)
+  - TRCurrencyTextField (from `https://github.com/thiagorossener/TRCurrencyTextField.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  Charts:
+    :branch: master
+    :git: https://github.com/danielgindi/Charts.git
+  TRCurrencyTextField:
+    :branch: master
+    :git: https://github.com/thiagorossener/TRCurrencyTextField.git
+
+CHECKOUT OPTIONS:
+  Charts:
+    :commit: b1191bc146b98fddb0cab7324f94a993ffa3d74f
+    :git: https://github.com/danielgindi/Charts.git
+  TRCurrencyTextField:
+    :commit: 23ea6ab3b5c5ba1381a755f9aa333f9d67b927d2
+    :git: https://github.com/thiagorossener/TRCurrencyTextField.git
+
+SPEC CHECKSUMS:
+  Charts: 8a244acbb5054c54c1a54c3e82516f3aee30e68d
+  TRCurrencyTextField: a942d5bd9cffc3fcf0fa2661e712adc1404df97b
+
+PODFILE CHECKSUM: 13ed350ebc4f0609d2a8526bc63a5e0e1c886576
+
+COCOAPODS: 1.4.0
