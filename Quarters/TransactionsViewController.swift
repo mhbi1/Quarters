@@ -15,12 +15,26 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
     
     var transactionData: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     var transactions: [Transaction] = []
+    var personalTransactions: [Transaction] = []
+    var expenseTransactions: [Transaction] = []
     var transactionType: String?
     @IBOutlet weak var transactionsTable: UITableView!
     
     func fetchList() {
         // Fetches the request, executes and adds to the array
         transactions = ((try? transactionData.fetch(Transaction.fetchRequest())))!
+    }
+    
+    func getTransactionTypeList(){
+        
+        for t in transactions{
+            if (t.getTransactionType() == "Personal"){
+                personalTransactions.append(t)
+            }
+            else{
+               expenseTransactions.append(t)
+            }
+        }
     }
     
     // MARK: TableView
@@ -38,10 +52,8 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
             return transactions.count
         }
         else{
-           /* let sectionTitle: String  = transactionHeaders[section]
-            let sectionTransactions: [Transaction] = transactions.filter({$0.type == sectionTitle})
-            tableView.separatorStyle = .none*/
-            return transactions.count
+            tableView.separatorStyle = .none
+            return transactionType == "Personal" ?  personalTransactions.count : expenseTransactions.count
         }
     }
     
@@ -49,14 +61,28 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath) as! TransactionTableViewCell
         
-        if (transactions.count != 0){
-            //Get the Transaction  model for this index
-            let t = transactions[indexPath.row]
-            
-            cell.descriptionLabel?.text = t.getDescription()
-            cell.amountLabel?.text = String(format: "%.2f", t.getAmount())
-            cell.detailTextLabel?.textAlignment = .left
+       
+        if (transactionType == "Personal"){
+            if (indexPath.row < personalTransactions.count){
+                //Get the transactions for personal
+                let t = personalTransactions[indexPath.row]
+                
+                cell.descriptionLabel?.text = t.getDescription()
+                cell.amountLabel?.text = String(format: "%.2f", t.getAmount())
+                cell.detailTextLabel?.textAlignment = .left
+            }
         }
+        else{
+            if (indexPath.row < expenseTransactions.count){
+                //Get the transactions for expenses
+                let t = expenseTransactions[indexPath.row]
+                
+                cell.descriptionLabel?.text = t.getDescription()
+                cell.amountLabel?.text = String(format: "%.2f", t.getAmount())
+                cell.detailTextLabel?.textAlignment = .left
+            }
+        }
+        
         return cell
     }
     
@@ -84,7 +110,7 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchList()
-        
+        getTransactionTypeList()
         // Set up refresh control
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(refreshTransactionData(_:)), for: .valueChanged)
@@ -104,6 +130,7 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
     
     private func fetchTransactionData(){
         fetchList()
+        getTransactionTypeList()
         self.refreshControl.endRefreshing()
         transactionsTable.reloadData()
     }
