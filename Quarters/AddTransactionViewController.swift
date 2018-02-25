@@ -8,11 +8,10 @@
 
 import UIKit
 import CoreData
-import TRCurrencyTextField
 
 class AddTransactionViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     
-    @IBOutlet weak var amountTextField: TRCurrencyTextField!
+    @IBOutlet weak var amountTextField: CurrencyTextField!
     @IBOutlet weak var personalButton: UIButton!
     @IBOutlet weak var expenseButton: UIButton!
     @IBOutlet weak var transactionDescription: UITextView!
@@ -117,7 +116,7 @@ class AddTransactionViewController: UIViewController, UITextViewDelegate, UIText
         }
         else {
             let description: String = transactionDescription.text
-            let amount: Double = Double(amountTextField.text!)!
+            let amount: Double = Double(amountTextField.getAmount())!
             let ent = NSEntityDescription.entity(forEntityName: "Transaction", in: overviewTabVC.transactionData)
             
             
