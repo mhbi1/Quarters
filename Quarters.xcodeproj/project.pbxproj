@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36F68BEC59ED75A7A688F3C3 /* Pods_Quarters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E341097A7B3F74B13CD96AE /* Pods_Quarters.framework */; };
 		4C02C6412042255900516EC2 /* Mosk Ultra-Bold 900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C02C6382042255000516EC2 /* Mosk Ultra-Bold 900.ttf */; };
 		4C02C6422042255900516EC2 /* Mosk Extra-Light 200.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C02C6392042255100516EC2 /* Mosk Extra-Light 200.ttf */; };
 		4C02C6432042255900516EC2 /* Mosk Extra-Bold 800.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C02C63A2042255200516EC2 /* Mosk Extra-Bold 800.ttf */; };
@@ -32,8 +33,6 @@
 		4CDBCD5820126AD9009CA2E0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBCD5720126AD9009CA2E0 /* TabBarController.swift */; };
 		4CDBCD5A201270DA009CA2E0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBCD59201270DA009CA2E0 /* SettingsViewController.swift */; };
 		4CDBCD5C2012749D009CA2E0 /* addButton.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4CDBCD5B2012749D009CA2E0 /* addButton.jpeg */; };
-		5C1E027280412C8EFF5BDCBB /* Pods_Bettermint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9342848B8B9757B8475AEBA8 /* Pods_Bettermint.framework */; };
-		72E61BB9A1CAD0292BA644E1 /* Pods_Quarters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FB18C5B946C34756FAC20D /* Pods_Quarters.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,8 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		27A5F91EFEBCDB38596659E3 /* Pods-Quarters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quarters.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quarters/Pods-Quarters.release.xcconfig"; sourceTree = "<group>"; };
-		28FB18C5B946C34756FAC20D /* Pods_Quarters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quarters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E341097A7B3F74B13CD96AE /* Pods_Quarters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quarters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C02C6382042255000516EC2 /* Mosk Ultra-Bold 900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Ultra-Bold 900.ttf"; sourceTree = "<group>"; };
 		4C02C6392042255100516EC2 /* Mosk Extra-Light 200.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Extra-Light 200.ttf"; sourceTree = "<group>"; };
 		4C02C63A2042255200516EC2 /* Mosk Extra-Bold 800.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mosk Extra-Bold 800.ttf"; sourceTree = "<group>"; };
@@ -79,8 +77,8 @@
 		4CDBCD5720126AD9009CA2E0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4CDBCD59201270DA009CA2E0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4CDBCD5B2012749D009CA2E0 /* addButton.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = addButton.jpeg; path = Assets.xcassets/addButton.jpeg; sourceTree = "<group>"; };
-		9342848B8B9757B8475AEBA8 /* Pods_Bettermint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bettermint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED918BB725C74545540CECD4 /* Pods-Quarters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quarters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quarters/Pods-Quarters.debug.xcconfig"; sourceTree = "<group>"; };
+		60914200BFA95BF02D9029C4 /* Pods-Quarters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quarters.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quarters/Pods-Quarters.release.xcconfig"; sourceTree = "<group>"; };
+		ACD311111958E3AC549DEDC9 /* Pods-Quarters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quarters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quarters/Pods-Quarters.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,32 +86,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C1E027280412C8EFF5BDCBB /* Pods_Bettermint.framework in Frameworks */,
-				72E61BB9A1CAD0292BA644E1 /* Pods_Quarters.framework in Frameworks */,
+				36F68BEC59ED75A7A688F3C3 /* Pods_Quarters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2AECDDFE756BD7B29B818528 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9342848B8B9757B8475AEBA8 /* Pods_Bettermint.framework */,
-				28FB18C5B946C34756FAC20D /* Pods_Quarters.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		422B5B9269400BA5E502280A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				ED918BB725C74545540CECD4 /* Pods-Quarters.debug.xcconfig */,
-				27A5F91EFEBCDB38596659E3 /* Pods-Quarters.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		4C404895200FF75B002E7C5A = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +100,8 @@
 				4CAC3E72202BAE5000FB6507 /* Transaction+CoreDataProperties.swift */,
 				4C4048A0200FF75B002E7C5A /* Quarters */,
 				4C40489F200FF75B002E7C5A /* Products */,
-				422B5B9269400BA5E502280A /* Pods */,
-				2AECDDFE756BD7B29B818528 /* Frameworks */,
+				8E6B56BB22D0055A26934577 /* Pods */,
+				88E8CA79867B4CF60061A2E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +152,23 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		88E8CA79867B4CF60061A2E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E341097A7B3F74B13CD96AE /* Pods_Quarters.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E6B56BB22D0055A26934577 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACD311111958E3AC549DEDC9 /* Pods-Quarters.debug.xcconfig */,
+				60914200BFA95BF02D9029C4 /* Pods-Quarters.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,13 +176,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C4048B3200FF75B002E7C5A /* Build configuration list for PBXNativeTarget "Quarters" */;
 			buildPhases = (
-				B26E9EA5731FC627E0BFA02C /* [CP] Check Pods Manifest.lock */,
+				504F8DF012ADEDE832F21201 /* [CP] Check Pods Manifest.lock */,
 				4C40489A200FF75B002E7C5A /* Sources */,
 				4C40489B200FF75B002E7C5A /* Frameworks */,
 				4C40489C200FF75B002E7C5A /* Resources */,
-				D8E50DCC15215F6F86089DFD /* [CP] Embed Pods Frameworks */,
-				348F79CD8136861381CC4CD1 /* [CP] Copy Pods Resources */,
 				4C6261F3203249CE0046B4D0 /* Embed Frameworks */,
+				ACE13A0343F542F5BB08D6A0 /* [CP] Embed Pods Frameworks */,
+				CDF8FCB439C3E8D563903E2A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,22 +253,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		348F79CD8136861381CC4CD1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quarters/Pods-Quarters-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B26E9EA5731FC627E0BFA02C /* [CP] Check Pods Manifest.lock */ = {
+		504F8DF012ADEDE832F21201 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,7 +271,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D8E50DCC15215F6F86089DFD /* [CP] Embed Pods Frameworks */ = {
+		ACE13A0343F542F5BB08D6A0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -308,6 +289,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quarters/Pods-Quarters-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDF8FCB439C3E8D563903E2A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quarters/Pods-Quarters-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -463,12 +459,12 @@
 		};
 		4C4048B4200FF75B002E7C5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED918BB725C74545540CECD4 /* Pods-Quarters.debug.xcconfig */;
+			baseConfigurationReference = ACD311111958E3AC549DEDC9 /* Pods-Quarters.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NWK4MVPF4Y;
-				INFOPLIST_FILE = Bettermint/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Quarters/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mbjg.Bettermint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -479,12 +475,12 @@
 		};
 		4C4048B5200FF75B002E7C5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27A5F91EFEBCDB38596659E3 /* Pods-Quarters.release.xcconfig */;
+			baseConfigurationReference = 60914200BFA95BF02D9029C4 /* Pods-Quarters.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NWK4MVPF4Y;
-				INFOPLIST_FILE = Bettermint/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Quarters/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mbjg.Bettermint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
