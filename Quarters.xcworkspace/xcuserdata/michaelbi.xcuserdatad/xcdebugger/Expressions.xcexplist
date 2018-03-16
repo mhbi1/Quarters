@@ -3,6 +3,44 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "OverviewTabViewController.updatePieChart():OverviewTabViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "expensesAmount">
+            </PersistentString>
+            <PersistentString
+               value = "personalAmount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SettingsTableViewController.tableView(_:didSelectRowAt:):SettingsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "overviewVC.transactionData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "OverviewTabViewController.updateAccountOverview():OverviewTabViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "personalAmount">
+            </PersistentString>
+            <PersistentString
+               value = "expensesAmount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "OverviewTabViewController.getExpensesAmount():OverviewTabViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "t.amount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "TransactionsViewController.tableView(_:cellForRowAt:):TransactionsViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -10,6 +48,14 @@
             </PersistentString>
             <PersistentString
                value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "mach_msg_trap:(null)">
+         <PersistentStrings>
+            <PersistentString
+               value = "transactions">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

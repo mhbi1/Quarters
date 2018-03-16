@@ -16,6 +16,7 @@ class OverviewTabViewController: UIViewController, UITextViewDelegate, ChartView
     var newTransaction: Transaction?
     
     var transactionHeaders: [String] = ["Expense", "Personal"]
+    var transactions: [Transaction] = []
     let defaults = UserDefaults.standard
     var transactionType: String?
     var monthlyIncome: Double?
@@ -28,7 +29,6 @@ class OverviewTabViewController: UIViewController, UITextViewDelegate, ChartView
     var typeAlert: UIAlertController = UIAlertController()
     
     @IBOutlet weak var expenseTable: UITableView!
-    @IBOutlet weak var personalTable: UITableView!
     
     @IBOutlet weak var pieChart: PieChartView!
     @IBOutlet weak var savingsAmountText: UILabel!
@@ -40,7 +40,31 @@ class OverviewTabViewController: UIViewController, UITextViewDelegate, ChartView
     @IBOutlet weak var expenseButton: UIButton!
     @IBOutlet weak var transactionDescription: UITextView!
    
-    // MARK:
+    func fetchList() {
+        // Fetches the request, executes and adds to the array
+        transactions = ((try? transactionData.fetch(Transaction.fetchRequest())))!
+    }
+    
+    public func deleteContext(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Transaction")
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do
+        {
+            let results = try managedContext.fetch(fetchRequest)
+            for managedObject in results
+            {
+                let managedObjectData:NSManagedObject = managedObject as! NSManagedObject
+                managedContext.delete(managedObjectData)
+            }
+        } catch let error as NSError {
+            print("Delete all data in Transaction error : \(error) \(error.userInfo)")
+        }
+    }
+    
+    // MARK: Chart
     // Selecting value brings you to transactions tableView
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         let temp: PieChartDataEntry = entry.copyWithZone(nil) as! PieChartDataEntry
@@ -58,7 +82,6 @@ class OverviewTabViewController: UIViewController, UITextViewDelegate, ChartView
     }
     
     @IBAction func unwindToOverviewVC(segue: UIStoryboardSegue){
-        
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -67,23 +90,33 @@ class OverviewTabViewController: UIViewController, UITextViewDelegate, ChartView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchList()
         monthlyIncome = defaults.double(forKey: "monthlyIncome")
         pieChart.delegate = self
         updatePieChart()
-        incomeAmountText.text = String(format: "$%.02f", monthlyIncome!)
-        totalSpentAmountText.text = String(format: "$%.02f", personalAmount! + expensesAmount!)
-        savingsAmountText.text = String(format: "$%.02f", savingsAmount!)
-        
+        updateAccountOverview()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        fetchList()
+        getMonthlyIncome()
+        updatePieChart()
+        updateAccountOverview()
+    }
+    
+    func updateAccountOverview(){
+        incomeAmountText.text = String(format: "$%.02f", monthlyIncome!)
+        totalSpentAmountText.text = String(format: "$%.02f", personalAmount! + expensesAmount!)
+        savingsAmountText.text = String(format: "$%.02f", savingsAmount!)
     }
     
     func updatePieChart(){
-        expensesAmount = monthlyIncome! * 0.5
-        personalAmount = monthlyIncome! * 0.3
+        expensesAmount = getExpensesAmount()
+        personalAmount = getPersonalAmount()
         savingsAmount = monthlyIncome! - expensesAmount! - personalAmount!
         let expenses = PieChartDataEntry(value: expensesAmount!, label: "Expenses")
         let personal = PieChartDataEntry(value: personalAmount!, label: "Personal")
@@ -91,11 +124,12 @@ class OverviewTabViewController: UIViewController, UITextViewDelegate, ChartView
         let dataSet = PieChartDataSet(values: [expenses, personal, savings], label: "")
         let data = PieChartData(dataSet: dataSet)
         dataSet.selectionShift = 15
-        dataSet.sliceSpace = 5
+        dataSet.sliceSpace = 2
         data.setValueTextColor(UIColor.gray)
         pieChart.data = data
         pieChart.drawHoleEnabled = false
         pieChart.drawEntryLabelsEnabled = false
+        pieChart.drawSlicesUnderHoleEnabled = true
         pieChart.chartDescription?.text = ""
         
         dataSet.colors = ChartColorTemplates.liberty()
@@ -104,10 +138,29 @@ class OverviewTabViewController: UIViewController, UITextViewDelegate, ChartView
         pieChart.notifyDataSetChanged()
     }
     
-    func calculatePercentages(){
-        
+    func getMonthlyIncome(){
+        monthlyIncome = defaults.double(forKey: "monthlyIncome")
     }
     
+    func getExpensesAmount() -> Double{
+        var amount = 0.00
+        for t in transactions{
+            if (t.type == "Expense"){
+                amount += t.getAmount()
+            }
+        }
+        return amount
+    }
+    
+    func getPersonalAmount() -> Double{
+        var amount = 0.00
+        for t in transactions{
+            if (t.type == "Personal"){
+                amount += t.getAmount()
+            }
+        }
+        return amount
+    }
 }
 
 

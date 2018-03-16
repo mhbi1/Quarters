@@ -44,7 +44,7 @@ extension Transaction {
     
     // Set Functions
     func setAmount(a:Double){
-        amount = a
+        amount = a * 0.01
     }
     
     func setDescription(d:String){
@@ -54,5 +54,6 @@ extension Transaction {
     func setTransactionType(t: String){
         type = t
     }
+
 
 }

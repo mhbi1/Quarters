@@ -25,6 +25,10 @@
 		4C4048AC200FF75B002E7C5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4048AB200FF75B002E7C5A /* Assets.xcassets */; };
 		4C4048AF200FF75B002E7C5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4048AD200FF75B002E7C5A /* LaunchScreen.storyboard */; };
 		4C564CAD2037C04100836448 /* Too_Many_Cowboys.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C564CAC2037C04000836448 /* Too_Many_Cowboys.ttf */; };
+		4C8A81EC204F80060091660D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A81EB204F80060091660D /* SettingsTableViewController.swift */; };
+		4C8A81EE2050B71B0091660D /* ExpansionCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A81ED2050B71B0091660D /* ExpansionCellTableViewCell.swift */; };
+		4C8A81F7205B75120091660D /* Setting1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A81F5205B75120091660D /* Setting1.png */; };
+		4C8A81FB205B77A90091660D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A81FA205B77A90091660D /* logo.png */; };
 		4CAC3E73202BAE5000FB6507 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC3E71202BAE5000FB6507 /* Transaction+CoreDataClass.swift */; };
 		4CAC3E74202BAE5000FB6507 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC3E72202BAE5000FB6507 /* Transaction+CoreDataProperties.swift */; };
 		4CD54871204280CA00E851DA /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD54870204280CA00E851DA /* CurrencyTextField.swift */; };
@@ -32,7 +36,6 @@
 		4CDBCD52201268A2009CA2E0 /* circlegraph.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CDBCD51201268A1009CA2E0 /* circlegraph.jpg */; };
 		4CDBCD5620126A06009CA2E0 /* OverviewTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBCD5520126A06009CA2E0 /* OverviewTabViewController.swift */; };
 		4CDBCD5820126AD9009CA2E0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBCD5720126AD9009CA2E0 /* TabBarController.swift */; };
-		4CDBCD5A201270DA009CA2E0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBCD59201270DA009CA2E0 /* SettingsViewController.swift */; };
 		4CDBCD5C2012749D009CA2E0 /* addButton.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4CDBCD5B2012749D009CA2E0 /* addButton.jpeg */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +73,10 @@
 		4C4048AE200FF75B002E7C5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C4048B0200FF75B002E7C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C564CAC2037C04000836448 /* Too_Many_Cowboys.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Too_Many_Cowboys.ttf; sourceTree = "<group>"; };
+		4C8A81EB204F80060091660D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		4C8A81ED2050B71B0091660D /* ExpansionCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionCellTableViewCell.swift; sourceTree = "<group>"; };
+		4C8A81F5205B75120091660D /* Setting1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Setting1.png; sourceTree = "<group>"; };
+		4C8A81FA205B77A90091660D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		4CAC3E71202BAE5000FB6507 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4CAC3E72202BAE5000FB6507 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4CD54870204280CA00E851DA /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
@@ -77,7 +84,6 @@
 		4CDBCD51201268A1009CA2E0 /* circlegraph.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = circlegraph.jpg; path = Assets.xcassets/circlegraph.jpg; sourceTree = "<group>"; };
 		4CDBCD5520126A06009CA2E0 /* OverviewTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTabViewController.swift; sourceTree = "<group>"; };
 		4CDBCD5720126AD9009CA2E0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		4CDBCD59201270DA009CA2E0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4CDBCD5B2012749D009CA2E0 /* addButton.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = addButton.jpeg; path = Assets.xcassets/addButton.jpeg; sourceTree = "<group>"; };
 		60914200BFA95BF02D9029C4 /* Pods-Quarters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quarters.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quarters/Pods-Quarters.release.xcconfig"; sourceTree = "<group>"; };
 		ACD311111958E3AC549DEDC9 /* Pods-Quarters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quarters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quarters/Pods-Quarters.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +124,7 @@
 		4C4048A0200FF75B002E7C5A /* Quarters */ = {
 			isa = PBXGroup;
 			children = (
+				4C8A81EF205B748F0091660D /* Images */,
 				4C564CAE2037C04900836448 /* Fonts */,
 				4CDBCD5B2012749D009CA2E0 /* addButton.jpeg */,
 				4CDBCD51201268A1009CA2E0 /* circlegraph.jpg */,
@@ -130,10 +137,11 @@
 				4C4048A8200FF75B002E7C5A /* Bettermint.xcdatamodeld */,
 				4CDBCD5520126A06009CA2E0 /* OverviewTabViewController.swift */,
 				4CDBCD5720126AD9009CA2E0 /* TabBarController.swift */,
-				4CDBCD59201270DA009CA2E0 /* SettingsViewController.swift */,
 				4C05D9C62026D169002DD8B5 /* NewBudgetViewController.swift */,
 				4CDABD1E2042072D0099CC90 /* TransactionsViewController.swift */,
 				4CD54870204280CA00E851DA /* CurrencyTextField.swift */,
+				4C8A81EB204F80060091660D /* SettingsTableViewController.swift */,
+				4C8A81ED2050B71B0091660D /* ExpansionCellTableViewCell.swift */,
 			);
 			path = Quarters;
 			sourceTree = "<group>";
@@ -153,6 +161,15 @@
 				4C564CAC2037C04000836448 /* Too_Many_Cowboys.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4C8A81EF205B748F0091660D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4C8A81FA205B77A90091660D /* logo.png */,
+				4C8A81F5205B75120091660D /* Setting1.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		88E8CA79867B4CF60061A2E9 /* Frameworks */ = {
@@ -240,6 +257,8 @@
 				4C02C6422042255900516EC2 /* Mosk Extra-Light 200.ttf in Resources */,
 				4C02C6472042255900516EC2 /* Mosk Normal 400.ttf in Resources */,
 				4C564CAD2037C04100836448 /* Too_Many_Cowboys.ttf in Resources */,
+				4C8A81FB205B77A90091660D /* logo.png in Resources */,
+				4C8A81F7205B75120091660D /* Setting1.png in Resources */,
 				4C4048AF200FF75B002E7C5A /* LaunchScreen.storyboard in Resources */,
 				4C02C6452042255900516EC2 /* Mosk Thin 100.ttf in Resources */,
 				4C02C6442042255900516EC2 /* Mosk Bold 700.ttf in Resources */,
@@ -321,12 +340,13 @@
 				4C4048A2200FF75B002E7C5A /* AppDelegate.swift in Sources */,
 				4C4048AA200FF75B002E7C5A /* Bettermint.xcdatamodeld in Sources */,
 				4CDABD1F2042072E0099CC90 /* TransactionsViewController.swift in Sources */,
+				4C8A81EE2050B71B0091660D /* ExpansionCellTableViewCell.swift in Sources */,
 				4CD54871204280CA00E851DA /* CurrencyTextField.swift in Sources */,
 				4CAC3E73202BAE5000FB6507 /* Transaction+CoreDataClass.swift in Sources */,
 				4CAC3E74202BAE5000FB6507 /* Transaction+CoreDataProperties.swift in Sources */,
+				4C8A81EC204F80060091660D /* SettingsTableViewController.swift in Sources */,
 				4CDBCD5820126AD9009CA2E0 /* TabBarController.swift in Sources */,
 				4CDBCD5620126A06009CA2E0 /* OverviewTabViewController.swift in Sources */,
-				4CDBCD5A201270DA009CA2E0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

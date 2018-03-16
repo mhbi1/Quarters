@@ -24,7 +24,7 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
         // Fetches the request, executes and adds to the array
         transactions = ((try? transactionData.fetch(Transaction.fetchRequest())))!
     }
-    
+
     func getTransactionTypeList(){
         
         for t in transactions{
@@ -134,6 +134,8 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
         self.refreshControl.endRefreshing()
         transactionsTable.reloadData()
     }
+    
+    
 
 }
 
